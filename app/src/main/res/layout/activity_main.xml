@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/relativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/curTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Курс валюти станом на:"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/currencyUSDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_below="@+id/curTextView"
+            android:layout_alignLeft="@+id/curTextView"
+            android:layout_alignStart="@+id/curTextView"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:id="@+id/currencyEURTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EUR"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_below="@+id/currencyUSDTextView"
+            android:layout_alignLeft="@+id/currencyUSDTextView"
+            android:layout_alignStart="@+id/currencyUSDTextView"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:id="@+id/currencyRUBTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RUB"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_below="@+id/currencyEURTextView"
+            android:layout_alignLeft="@+id/currencyEURTextView"
+            android:layout_alignStart="@+id/currencyEURTextView"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-light"/>
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/view1"
+        android:layout_alignLeft="@+id/relativeLayout"
+        android:layout_alignStart="@+id/relativeLayout">
+
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLength="7"
+            android:id="@+id/editText"
+            android:text=""
+            android:fontFamily="sans-serif-light"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:fontFamily="sans-serif-light"
+            android:layout_toRightOf="@+id/editText"
+            android:layout_toEndOf="@+id/editText"
+            android:layout_marginLeft="15dp" />
+
+        </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/relativeLayout2"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignLeft="@+id/relativeLayout"
+        android:layout_alignStart="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/tvCurValUAH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ValueUAH"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-light"
+            />
+
+        <TextView
+            android:id="@+id/tvNameUAH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UAH ( ₴ )"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:paddingLeft="30dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvCurValUAH"
+            android:layout_toEndOf="@+id/tvCurValUAH" />
+
+        <TextView
+            android:id="@+id/tvCurValUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ValueUSD"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_below="@+id/tvCurValUAH"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:id="@+id/tvNameUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD ( $ )"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:paddingLeft="30dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_below="@+id/tvCurValUAH"
+            android:layout_toRightOf="@+id/tvCurValUSD"
+            android:layout_toEndOf="@+id/tvCurValUSD" />
+
+        <TextView
+            android:id="@+id/tvCurValEUR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ValueEUR"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_below="@+id/tvCurValUSD"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:id="@+id/tvNameEUR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EUR ( € )"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:paddingLeft="30dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_below="@+id/tvCurValUSD"
+            android:layout_toRightOf="@+id/tvCurValEUR"
+            android:layout_toEndOf="@+id/tvCurValEUR" />
+
+        <TextView
+            android:id="@+id/tvCurValRUB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ValueRUB"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_below="@+id/tvCurValEUR"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:id="@+id/tvNameRUB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RUB ( Р )"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:paddingLeft="30dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_below="@+id/tvCurValEUR"
+            android:layout_toRightOf="@+id/tvCurValRUB"
+            android:layout_toEndOf="@+id/tvCurValRUB" />
+
+        <TextView
+            android:id="@+id/tvCurValGBP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ValueGBP"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:layout_below="@+id/tvCurValRUB"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-light"/>
+
+        <TextView
+            android:id="@+id/tvNameGBP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GBP ( £ )"
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:paddingLeft="30dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_below="@+id/tvCurValRUB"
+            android:layout_toRightOf="@+id/tvCurValGBP"
+            android:layout_toEndOf="@+id/tvCurValGBP" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
